@@ -126,7 +126,7 @@ https://fjo2r5l6tc.execute-api.ap-south-1.amazonaws.com
 
    <img width="1807" height="904" alt="image" src="https://github.com/user-attachments/assets/7b3e3a46-2647-44d2-a573-88c1a6c066ff" />
 
-## **Step 3: Build Error: Missing `env.json` File
+## Step 3: Build Error: Missing `env.json` File
 
 ###  Error Message
 During the frontend production build, the following error may occur:
