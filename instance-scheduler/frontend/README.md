@@ -47,13 +47,13 @@ The frontend architecture consists of:
 
 ---
 
-## **5. Procedure**
+## **4. Procedure**
 
 ---
 
 ## **Step 1: Update Frontend Environment Configuration**
 
-### **5.1 Fetch Cognito Client ID**
+### **4.1 Fetch Cognito Client ID**
 
 1. Go to **AWS Console → Amazon Cognito**
 2. Select **User Pool**
@@ -68,7 +68,7 @@ The frontend architecture consists of:
 
 ---
 
-### **5.2 Fetch API Base URL**
+### **4.2 Fetch API Base URL**
 
 1. Go to **AWS Console → Amazon API Gateway**
 2. Select the required API
@@ -88,7 +88,7 @@ https://fjo2r5l6tc.execute-api.ap-south-1.amazonaws.com
 
 ---
 
-### **5.3 Update `env.json` File**
+### **4.3 Update `env.json` File**
 
 1. Open `env.json`
 2. Update the following mandatory attributes:
@@ -128,7 +128,7 @@ https://fjo2r5l6tc.execute-api.ap-south-1.amazonaws.com
 
 ### Build Error: Missing `env.json` File
 
-### 🔍 Error Message
+###  Error Message
 During the frontend production build, the following error may occur:
 
 ### solution 
@@ -155,14 +155,15 @@ sudo vim /var/www/env/env.json
 
 4. Delete dist folder 
 
-   ```
-  sudo rm -rf dist
-   ```
+```
+sudo rm -rf dist
+```
 5. Re-run the build command
 
 ```
 npm run build
 ```
+
 <img width="1600" height="618" alt="image" src="https://github.com/user-attachments/assets/78ad930c-9231-457b-8d42-ea33ad0a415d" />
 
 ---
