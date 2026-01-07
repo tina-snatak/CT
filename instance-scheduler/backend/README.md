@@ -16,11 +16,11 @@ This SOP ensures:
 
 ---
 
-## **3. Prerequisites**
+## **2. Prerequisites**
 
 Ensure the following are available before starting:
 
-### **3.1 AWS Requirements**
+### **2.1 AWS Requirements**
 
 * Active AWS account
 * IAM user with permissions for:
@@ -31,13 +31,13 @@ Ensure the following are available before starting:
   * IAM (Role creation)
   * EC2 / VPC
   
-### **3.2 Local System Requirements**
+### **2.2 Local System Requirements**
 
 * Docker installed
 * AWS CLI installed and configured
 * Git installed
 
-### **3.3 Repository**
+### **2.3 Repository**
 
 * Git repository named:
   **`Instance-Scheduler`**
@@ -45,7 +45,7 @@ Ensure the following are available before starting:
 
 ---
 
-## **4. Architecture Overview**
+## **3. Architecture Overview**
 
 <img width="720" height="382" alt="image" src="https://github.com/user-attachments/assets/a2e96008-3e15-4f6c-9d89-63be92c90f5a" />
 
@@ -60,11 +60,11 @@ The solution consists of:
 
 ---
 
-## **5. Procedure**
+## **4. Procedure**
 
 ---
 
-## **Step 1: Clone the Instance Scheduler Repository**
+### **Step 1: Clone the Instance Scheduler Repository**
 
 1. Clone the repository:
 
@@ -79,7 +79,7 @@ The solution consists of:
 
 ---
 
-## **Step 2: Build Docker Image**
+### **Step 2: Build Docker Image**
 
 1. Verify that the `Dockerfile` exists in the root directory.
 2. Build the Docker image:
@@ -92,7 +92,7 @@ The solution consists of:
 
 ---
 
-## **Step 3: Create Amazon ECR Repository**
+### **Step 3: Create Amazon ECR Repository**
 
 1. Go to **AWS Console → Amazon ECR**
 2. Select **Private Registry**
@@ -111,7 +111,7 @@ The solution consists of:
 
 ---
 
-## **Step 4: Push Docker Image to ECR**
+### **Step 4: Push Docker Image to ECR**
 
 1. Push the image:
 
@@ -122,9 +122,9 @@ The solution consists of:
 
 ---
 
-## **Step 5: Configure Amazon Cognito**
+### **Step 5: Configure Amazon Cognito**
 
-### **5.1 Create User Pool**
+#### **5.1 Create User Pool**
 
 1. Go to **AWS Console → Amazon Cognito**
 2. Click **Create User Pool**
@@ -135,7 +135,7 @@ The solution consists of:
    ```
 ---
 
-### **5.2 Application Configuration**
+#### **5.2 Application Configuration**
 
 * Application Type: **Single Page Application (SPA)**
 * Application Name:
@@ -146,7 +146,7 @@ The solution consists of:
 
 ---
 
-### **5.3 Sign-In & Sign-Up Settings**
+#### **5.3 Sign-In & Sign-Up Settings**
 
 * Sign-in option:
 
@@ -160,7 +160,7 @@ The solution consists of:
 
 ---
 
-### **5.4 Security & Authentication Settings**
+#### **5.4 Security & Authentication Settings**
 
 * Password policy:
 
@@ -172,7 +172,7 @@ The solution consists of:
 
 ---
 
-### **5.5 Hosted UI & URLs**
+#### **5.5 Hosted UI & URLs**
 
 * Callback URL:
 
@@ -183,7 +183,7 @@ The solution consists of:
 
 ---
 
-### **5.6 Save the Following Values (Mandatory)**
+#### **5.6 Save the Following Values (Mandatory)**
 
 After creation, note down:
 
@@ -198,7 +198,7 @@ After creation, note down:
 
 ---
 
-## **Step 6: Update CloudFormation Template**
+### **Step 6: Update CloudFormation Template**
 
 File:
 
@@ -208,7 +208,7 @@ cloudformation/with_network.yml
 
 Update the **CognitoAuthorizer** section:
 
-### **Mandatory Attributes to Update**
+#### **Mandatory Attributes to Update**
 
 * **Audience**
 
@@ -224,7 +224,7 @@ Update the **CognitoAuthorizer** section:
 
 ---
 
-## **Step 7: Create IAM Role**
+### **Step 7: Create IAM Role**
 
 1. Go to **AWS Console → IAM → Roles**
 2. Create a new role
@@ -244,7 +244,7 @@ Update the **CognitoAuthorizer** section:
 
 ---
 
-## **Step 8: Deploy CloudFormation Stack**
+### **Step 8: Deploy CloudFormation Stack**
 
 1. Go to **AWS Console → CloudFormation**
 2. Click **Create Stack**
@@ -258,7 +258,7 @@ Update the **CognitoAuthorizer** section:
 
 ---
 
-### **Stack Configuration**
+#### **Stack Configuration**
 
 1. Stack Name:
 
@@ -271,14 +271,14 @@ Update the **CognitoAuthorizer** section:
 
 ---
 
-### **Permissions**
+#### **Permissions**
 
 * Attach the IAM Role created earlier
 * Acknowledge IAM role creation checkbox
 
 ---
 
-### **Final Deployment**
+#### **Final Deployment**
 
 1. Click **Next**
 2. Review configuration
@@ -287,7 +287,7 @@ Update the **CognitoAuthorizer** section:
 <img width="1907" height="802" alt="image" src="https://github.com/user-attachments/assets/c8bd5c9d-9513-4c70-8088-91586985cc00" />
 ---
 
-## **Step 9: Validation & Verification**
+### **Step 9: Validation & Verification**
 
 * Verify CloudFormation stack status: **CREATE_COMPLETE**
 * Confirm:
@@ -299,7 +299,7 @@ Update the **CognitoAuthorizer** section:
 
 ---
 
-## **6. Security & Best Practices**
+## **5. Security & Best Practices**
 
 * Use **private ECR repositories only**
 * Disable self-sign-up unless business requires
@@ -309,7 +309,7 @@ Update the **CognitoAuthorizer** section:
 
 ---
 
-## **7. Conclusion**
+## **6. Conclusion**
 
 This SOP defines a secure, scalable, and enterprise-ready approach for deploying the **Instance Scheduler Backend** using AWS native services.
 The process ensures:
