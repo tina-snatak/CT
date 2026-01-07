@@ -186,7 +186,7 @@ npm run build
 
 ---
 
-### **3.1 Public Access Configuration**
+### **4.1 Public Access Configuration**
 
 * **Uncheck**:
 
@@ -197,13 +197,13 @@ npm run build
 
 ---
 
-### **3.2 Create Bucket**
+### **4.2 Create Bucket**
 
 * Click **Create Bucket**
 
 ---
 
-## **Step 4: Enable Static Website Hosting**
+## **Step 5: Enable Static Website Hosting**
 
 1. Open the bucket:
 
@@ -225,7 +225,7 @@ npm run build
 
 ---
 
-## **Step 5: Attach Bucket Policy**
+## **Step 6: Attach Bucket Policy**
 
 Attach the following bucket policy to allow public read access:
 
@@ -246,7 +246,7 @@ Attach the following bucket policy to allow public read access:
 
 ---
 
-## **Step 6: Upload Frontend Build to S3**
+## **Step 7: Upload Frontend Build to S3**
 
 1. Navigate to the build directory:
 
@@ -262,7 +262,7 @@ Attach the following bucket policy to allow public read access:
 
 ---
 
-## **Step 7: Access Static Website**
+## **Step 8: Access Static Website**
 
 1. Go to **S3 → Properties → Static Website Hosting**
 2. Copy the **Bucket Website Endpoint**
@@ -272,9 +272,9 @@ Attach the following bucket policy to allow public read access:
 
 ---
 
-## **Step 8: Configure Cognito Users**
+## **Step 9: Configure Cognito Users**
 
-### **8.1 Create User**
+### **9.1 Create User**
 
 1. Go to **AWS Console → Amazon Cognito**
 2. Select the user pool
@@ -290,7 +290,7 @@ Attach the following bucket policy to allow public read access:
 
 ---
 
-### **8.2 Update App Client Authentication Flow**
+### **9.2 Update App Client Authentication Flow**
 
 1. Go to:
 
@@ -305,7 +305,7 @@ Attach the following bucket policy to allow public read access:
 
 ---
 
-### **8.3 Confirm User**
+### **9.3 Confirm User**
 
 1. Navigate to:
 
@@ -321,7 +321,7 @@ Attach the following bucket policy to allow public read access:
 
 ---
 
-## **Step 9: Validation & Testing**
+## **Step 10: Validation & Testing**
 
 * Open frontend URL
 * Login using Cognito user credentials
@@ -333,7 +333,7 @@ Attach the following bucket policy to allow public read access:
 
 ---
 
-## **6. Security & Best Practices**
+## **5. Security & Best Practices**
 
 * Do not hardcode secrets in frontend
 * Restrict API Gateway using Cognito Authorizer
@@ -342,7 +342,7 @@ Attach the following bucket policy to allow public read access:
 
 ---
 
-## **7. Conclusion**
+## **6. Conclusion**
 
 This SOP establishes a **secure, scalable, and standardized approach** for deploying the **Instance Scheduler Frontend** as a static website using AWS services.
 It ensures:
