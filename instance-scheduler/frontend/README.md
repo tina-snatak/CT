@@ -267,7 +267,9 @@ Attach the following bucket policy to allow public read access:
 1. Go to **S3 → Properties → Static Website Hosting**
 2. Copy the **Bucket Website Endpoint**
 3. Open the URL in a browser
-
+```
+http://instance-scheduler-website01.s3-website.ap-south-1.amazonaws.com
+```
 <img width="1806" height="961" alt="image" src="https://github.com/user-attachments/assets/4354740c-b1cf-4e85-8809-6df8ed911287" />
 
 ---
@@ -303,6 +305,7 @@ Attach the following bucket policy to allow public read access:
    *  USER_PASSWORD_AUTH
 4. Save changes
 
+<img width="1873" height="949" alt="image" src="https://github.com/user-attachments/assets/82ae68e4-c6d7-4589-b4a7-b4ac8b398947" />
 ---
 
 ### **9.3 Confirm User**
@@ -315,7 +318,6 @@ Attach the following bucket policy to allow public read access:
 2. Select the user
 3. Confirm user status
 
-<img width="1873" height="949" alt="image" src="https://github.com/user-attachments/assets/82ae68e4-c6d7-4589-b4a7-b4ac8b398947" />
 <img width="1913" height="706" alt="image" src="https://github.com/user-attachments/assets/1d33097f-4825-4f0b-9b3e-db58a4a167c2" />
 <img width="1512" height="123" alt="image" src="https://github.com/user-attachments/assets/45379a55-3662-4e6a-889c-77c701604be7" />
 
